@@ -5,12 +5,16 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+
+  var questionIndex= 0;
+
   void selectAnswer() {
+    questionIndex = questionIndex+1;
     print('Answer Select');
   }
 
   Widget build(BuildContext context) {
-    var question = [
+    var questions = [
       'What is your favourite Game?',
       'What is your favourite movies?'
     ];
@@ -23,7 +27,7 @@ class MyApp extends StatelessWidget {
           ),
           body: Column(
             children: [
-              Text(question.elementAt(0)),
+              Text(questions[questionIndex]),
               ElevatedButton(
                   child: Text('Answer 1'),
                   onPressed: () => print('Answer 1 Selected')),
