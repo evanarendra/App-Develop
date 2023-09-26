@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
 
   void selectAnswer() {
     questionIndex = questionIndex+1;
-    print('Answer Select');
+    print(questionIndex);
   }
 
   Widget build(BuildContext context) {
@@ -32,13 +32,13 @@ class MyApp extends StatelessWidget {
                   child: Text('Answer 1'),
                   onPressed: () => print('Answer 1 Selected')),
               ElevatedButton(
-                  child: Text('Answer 1'),
+                  child: Text('Answer 2'),
                   onPressed: () {
                     //-------
                     print('Answer 2 Selected');
                   }),
-              ElevatedButton(child: Text('Answer 1'), onPressed: selectAnswer),
-              ElevatedButton(onPressed: selectAnswer, child: Text('Answer 1')),
+              ElevatedButton(child: Text('Answer 3'), onPressed: selectAnswer),
+              ElevatedButton(onPressed: selectAnswer, child: Text('Answer 4')),
             ],
           )),
     );
